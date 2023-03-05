@@ -1,2 +1,14 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+using System;
+namespace EmployeeWages
+{
+    class program
+    {
+        static void Main(String[] args)
+        {
+            EmployeeWage wage = new EmployeeWage();
+            wage.Attendence();
+            wage.Daily_Emp_Wage();
+        }
+    }
+}
