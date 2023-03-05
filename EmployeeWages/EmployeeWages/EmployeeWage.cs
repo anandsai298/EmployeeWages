@@ -8,7 +8,7 @@ namespace EmployeeWages
 {
     public class EmployeeWage
     {
-        const int IS_PRESENT = 1,Wage_Hr =20,Full_Day_Hr =8,Part_Time_Hr =4,IS_FULL_TIME =0,IS_PART_TIME =1,WORKING_DAYS_MONTH = 20;//EmployeePresent(when constant is we have to use uppercase letters like IS_PRESENT)
+        const int IS_PRESENT = 1,Wage_Hr =20,Full_Day_Hr =8,Part_Time_Hr =4,IS_FULL_TIME =0,IS_PART_TIME =1,WORKING_DAYS_MONTH = 20,TOTAL_WORKING_HRS = 100;//EmployeePresent(when constant is we have to use uppercase letters like IS_PRESENT)
         public void Attendence()
         {
             Random rand = new Random();//inbuilt class using which we can choose random number
@@ -25,7 +25,8 @@ namespace EmployeeWages
             int EmpHrs = 0;
             Random random = new Random();
             //calculating wages per month
-            for (int i=0; i < WORKING_DAYS_MONTH; i++)
+            //calculate wages till total working hrs reached the month(100 hrs and 20 days)
+            for (int i = 0; i < WORKING_DAYS_MONTH && EmpHrs < TOTAL_WORKING_HRS ; i++)
             {
                 int check = random.Next(0, 3);
                 switch (check)
