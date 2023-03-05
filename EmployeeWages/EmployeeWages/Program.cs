@@ -1,14 +1,15 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using EmployeeWages;
 using System;
-namespace EmployeeWages
+namespace employeeWages
 {
     class program
     {
         static void Main(String[] args)
         {
-            EmployeeWage wage = new EmployeeWage();
-            wage.Attendence();
-            wage.Daily_Emp_Wage();
+            EmployeeWages.EmployeeWage Wage = new EmployeeWages.EmployeeWage();
+            Wage.Attendence();
+            Wage.Daily_Emp_Wage();
         }
     }
 }
