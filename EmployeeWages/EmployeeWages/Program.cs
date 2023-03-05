@@ -1,2 +1,16 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+using EmployeeWages;
+using System;
+using System.Linq.Expressions;
+
+namespace employeeWages
+{
+    class program
+    {
+        static void Main(String[] args)
+        {
+            EmployeeWage Wage=new EmployeeWage();
+            Wage.Attendence();
+        }
+    }
+}
