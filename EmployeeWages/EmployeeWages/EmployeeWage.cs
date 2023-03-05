@@ -8,7 +8,7 @@ namespace EmployeeWages
 {
     public class EmployeeWage
     {
-        const int IS_PRESENT = 1,Wage_Hr =20,Full_Day_Hr =8,Part_Time_Hr =4,IS_FULL_TIME =0,IS_PART_TIME =1;//EmployeePresent(when constant is we have to use uppercase letters like IS_PRESENT)
+        const int IS_PRESENT = 1,Wage_Hr =20,Full_Day_Hr =8,Part_Time_Hr =4,IS_FULL_TIME =0,IS_PART_TIME =1,WORKING_DAYS_MONTH = 20;//EmployeePresent(when constant is we have to use uppercase letters like IS_PRESENT)
         public void Attendence()
         {
             Random rand = new Random();//inbuilt class using which we can choose random number
@@ -23,19 +23,23 @@ namespace EmployeeWages
         public void Daily_Emp_Wage()
         {
             int EmpHrs = 0;
-            Random random = new Random(); //uc4-switch case
-            int check = random.Next(0, 3);
-            switch (check)
+            Random random = new Random();
+            //calculating wages per month
+            for (int i=0; i < WORKING_DAYS_MONTH; i++)
             {
-                case IS_FULL_TIME:
-                    EmpHrs = Full_Day_Hr;
-                    break;
-                case IS_PART_TIME:
-                    EmpHrs = Part_Time_Hr;
-                    break;
-                default:
-                    EmpHrs = 0;
-                    break;
+                int check = random.Next(0, 3);
+                switch (check)
+                {
+                    case IS_FULL_TIME:
+                        EmpHrs += Full_Day_Hr;
+                        break;
+                    case IS_PART_TIME:
+                        EmpHrs += Part_Time_Hr;
+                        break;
+                    default:
+                        EmpHrs += 0;
+                        break;
+                }
             }
             int Wage = Wage_Hr * EmpHrs;
             Console.WriteLine(Wage);
