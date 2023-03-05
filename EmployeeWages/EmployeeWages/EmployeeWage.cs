@@ -23,18 +23,22 @@ namespace EmployeeWages
         public void Daily_Emp_Wage()
         {
             int EmpHrs = 0;
-            Random random = new Random();
+            Random random = new Random(); //uc4-switch case
             int check = random.Next(0, 3);
-            if (check == IS_FULL_TIME)
-                EmpHrs = Full_Day_Hr;
-            if (check == IS_PART_TIME)
-                EmpHrs = Part_Time_Hr;
-            else
-                EmpHrs = 0;
+            switch (check)
+            {
+                case IS_FULL_TIME:
+                    EmpHrs = Full_Day_Hr;
+                    break;
+                case IS_PART_TIME:
+                    EmpHrs = Part_Time_Hr;
+                    break;
+                default:
+                    EmpHrs = 0;
+                    break;
+            }
             int Wage = Wage_Hr * EmpHrs;
-            Console.WriteLine(Wage);//commit uc2 to main
+            Console.WriteLine(Wage);
         }
-        //uc3-Addparttimeemployee and wages=4
-
     }
 }
