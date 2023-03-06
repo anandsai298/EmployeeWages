@@ -20,7 +20,7 @@ namespace EmployeeWages
          //commit the code to uc1 branch and merge with main  
         }
         //uc2-dailyempwage
-        public void Daily_Emp_Wage()
+        public void Emp_Wage()
         {
             int EmpHrs = 0;
             Random random = new Random();

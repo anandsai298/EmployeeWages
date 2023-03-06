@@ -9,7 +9,7 @@ namespace employeeWages
         {
             EmployeeWages.EmployeeWage Wage = new EmployeeWages.EmployeeWage();
             Wage.Attendence();
-            Wage.Daily_Emp_Wage();
+            Wage.Emp_Wage();
         }
     }
 }
