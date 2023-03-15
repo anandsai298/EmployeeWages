@@ -5,11 +5,12 @@ namespace employeeWages
 {
     class program
     {
-        static void Main(String[] args)
+        public static void Main(String[] args)
         {
-            EmployeeWages.EmployeeWage Wage = new EmployeeWages.EmployeeWage();
-            Wage.Attendence();
-            Wage.Emp_Wage();
+            EmployeeWage employeeWage = new EmployeeWage();
+            employeeWage.Attendence();
+            EmployeeWage.EmpWage("jio", 30, 2, 20);
+            EmployeeWage.EmpWage("Idea", 20, 4, 10);
         }
     }
 }
